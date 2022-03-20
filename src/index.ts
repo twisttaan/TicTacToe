@@ -1,5 +1,10 @@
-import { handleRequest } from './handler'
+import { handleRequest } from "./bot";
+import { reportToWebhook } from "./utils/webhook";
 
-addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener("fetch", (event) => {
+  try {
+    event.respondWith(handleRequest(event.request));
+  } catch (err) {
+    reportToWebhook("Caught exception: " + err);
+  }
+});
