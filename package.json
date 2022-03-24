@@ -34,7 +34,7 @@
     "prettier": "^2.3.0",
     "service-worker-mock": "^2.0.5",
     "ts-loader": "^9.2.2",
-    "typescript": "^4.3.2",
+    "typescript": "4.6.3",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   },
